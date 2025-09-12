@@ -1,0 +1,22 @@
+@import "tailwindcss";
+ .app-container {
+    @apply relative bg-[#000319] bg-cover bg-no-repeat;
+    background-image: url('bg.png');
+  }
+
+  .app-container::before {
+    content: "";
+    @apply absolute inset-0 z-0;
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 100px 100px;
+  }
+  
+  body{
+    margin:0; 
+    
+  }
+
+  
+ 

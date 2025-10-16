@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+
 import {
   Github,
   Linkedin,
@@ -140,6 +141,7 @@ function Shell({ children }) {
       <main>{children}</main>
 
       {/* Footer */}
+      
       <footer className="mt-20 border-t">
         <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
           <div>
@@ -148,13 +150,19 @@ function Shell({ children }) {
               Crafting high-performance web experiences.
             </p>
             <div className="flex gap-3 mt-4">
-              <a href="#">
-                <Github className="h-5 w-5" />
+              <a href="https://github.com/shivamsingh9990"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              <Github/>
               </a>
-              <a href="#">
-                <Linkedin className="h-5 w-5" />
+              <a href="https://www.linkedin.com/in/shivam-singh-99b6a3246/"
+              target="_blank"
+              rel="noopener noreferrer">
+
+               linkdin
               </a>
-              <a href="mailto:shivam@example.com">
+              <a href="mailto:shivamsinghmaurya9@gmail.com">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
@@ -162,6 +170,7 @@ function Shell({ children }) {
           <div>
             <h4 className="font-bold mb-3">Quick Links</h4>
             <ul className="text-sm space-y-2">
+              
               {NAV.map((n) => (
                 <li key={n.id}>
                   <a href={`#${n.id}`}>{n.label}</a>
@@ -172,13 +181,13 @@ function Shell({ children }) {
           <div>
             <h4 className="font-bold mb-3">Contact</h4>
             <p className="text-sm flex items-center gap-2">
-              <MapPin className="h-4 w-4" /> Lucknow, India
+              <MapPin className="h-4 w-4" /> Delhi,India
             </p>
             <p className="text-sm flex items-center gap-2">
-              <Phone className="h-4 w-4" /> +91-00000-00000
+              <Phone className="h-4 w-4" /> +919810428985
             </p>
             <p className="text-sm flex items-center gap-2">
-              <Mail className="h-4 w-4" /> shivam@example.com
+              <Mail className="h-4 w-4" />shivamsinghmaurya9@gmail.com
             </p>
           </div>
         </div>
@@ -219,7 +228,7 @@ function Hero() {
             className="inline-flex items-center justify-center h-[40px] min-w-[100px] 
              cursor-pointer rounded-[12px] bg-indigo-600 px-7 text-[1rem] font-medium font-sans 
              text-white gap-2 shadow-[0_4px_24px_0_rgba(0,0,0,0.1)] 
-             backdrop-blur-[12px] border border-current animate-borderColorChange mt-5"
+             backdrop-blur-[0px] border border-current animate-borderColorChange mt-5"
           >
             <Download className="h-4 w-4 " />
             Download CV
@@ -266,8 +275,8 @@ function Head() {
           >
             Show my work
             <svg
-              stroke="currentColor"
-              fill="currentColor"
+              stroke="white"
+              fill="white"
               strokeWidth="0"
               viewBox="0 0 448 512"
               height="1em"
@@ -362,13 +371,17 @@ function Projects() {
             <div className="flex gap-3 mt-4 text-sm">
               <a
                 href={p.links.live}
-                className="flex items-center gap-1 text-indigo-600"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-indigo-600 hover:text-indigo-400 transition-colors duration-200"
               >
                 <ExternalLink className="h-4 w-4" /> Live
               </a>
               <a
                 href={p.links.repo}
-                className="flex items-center gap-1 text-gray-600"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-gray-600 hover:text-gray-400 transition-colors duration-200"
               >
                 <Github className="h-4 w-4" /> Code
               </a>
@@ -393,13 +406,17 @@ function Projects() {
             <div className="flex gap-3 mt-4 text-sm">
               <a
                 href={p.links.live}
-                className="flex items-center gap-1 text-indigo-600"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-indigo-600 hover:text-indigo-400 transition-colors duration-200"
               >
                 <ExternalLink className="h-4 w-4" /> Live
               </a>
               <a
                 href={p.links.repo}
-                className="flex items-center gap-1 text-gray-600"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-gray-600 hover:text-gray-400 transition-colors duration-200"
               >
                 <Github className="h-4 w-4" /> Code
               </a>
@@ -410,306 +427,326 @@ function Projects() {
     </section>
   );
 }
-function Approach() {
-  return (
-    <section className="max-w-6xl mx-auto px-4 py-20 ">
-      <h1 className="heading text-center text-5xl font-bold">
-        My <span className="text-[#cbacf9]">approach</span>
-      </h1>
-      <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
-        <div className="lg:h-[35rem] rounded-3xl border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem] ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black"
-          >
-            <path
-              strokeLinejoin="round"
-             
-              d="M12 6v12m6-6H6"
-            ></path>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v12m6-6H6"
-            ></path>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v12m6-6H6"
-            ></path>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v12m6-6H6"
-            ></path>
-          </svg>
-          <div className="relative z-20">
-            <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
-              <div>
-                <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"></span>
-                  <span className="text-2xl inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 font-bold text-white backdrop-blur-3xl">
-                    Phase 1
-                  </span>
-                </button>
-              </div>
-            </div>
-            <h2 className="text-center dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
-              Planning &amp; Strategy
-            </h2>
-            <h2
-              className="text-sm text-center dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200"
-              style={{color:"rgb(228, 236, 255)"}}
-            >
-              We'll collaborate to map out your website's goals, target
-              audience, and key functionalities. We'll discuss things like site
-              structure, navigation, and content requirements.
-            </h2>
-          </div>
-        </div>
-        <div className="lg:h-[35rem] rounded-3xl border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem] ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v12m6-6H6"
-            ></path>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v12m6-6H6"
-            ></path>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v12m6-6H6"
-            ></path>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v12m6-6H6"
-            ></path>
-          </svg>
-          <div className="relative z-20">
-            <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
-              <div>
-                <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"></span>
-                  <span className="text-2xl inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 font-bold text-white backdrop-blur-3xl">
-                    Phase 2
-                  </span>
-                </button>
-              </div>
-            </div>
-            <h2 className="text-center dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
-              Development &amp; Progress Update
-            </h2>
-            <h2
-              className="text-sm text-center dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200"
-              style={{color: "rgb(228, 236, 255)"}}
-            >
-              Once we agree on the plan, I cue my lofi playlist and dive into
-              coding. From initial sketches to polished code, I keep you updated
-              every step of the way
-            </h2>
-          </div>
-        </div>
-        <div className="lg:h-[35rem] rounded-3xl border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem] ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v12m6-6H6"
-            ></path>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v12m6-6H6"
-            ></path>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v12m6-6H6"
-            ></path>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v12m6-6H6"
-            ></path>
-          </svg>
-          <div className="relative z-20">
-            <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
-              <div>
-                <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"></span>
-                  <span className="text-2xl inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 font-bold text-white backdrop-blur-3xl">
-                    Phase 3
-                  </span>
-                </button>
-              </div>
-            </div>
-            <h2 className="text-center dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
-              Development &amp; Launch
-            </h2>
-            <h2
-              className="text-sm text-center dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200"
-              style={{color:" rgb(228, 236, 255)"}}
-            >
-              This is where the magic happens! Based on the approved design,
-              I'll translate everything into functional code, building your
-              website from the ground up.
-            </h2>
-          </div>
+function Approach(){
+  return(
+    <section>
+      <h1 className="text-[48px] font-bold text-center">My <span className="text-[#cbacf9]">approach</span></h1>
+    
+    
+<div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
+  
+  <div className="lg:h-[35rem] rounded-3xl border border-white/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem] ">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="white"
+      className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 6v12m6-6H6"
+      ></path>
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="white"
+      className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 6v12m6-6H6"
+      ></path>
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="white"
+      className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 6v12m6-6H6"
+      ></path>
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="white"
+      className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 6v12m6-6H6"
+      ></path>
+    </svg>
+    <div className="relative z-20">
+      <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
+        <div>
+          <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"></span>
+            <span className="text-2xl inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 font-bold text-white backdrop-blur-3xl">
+              Phase 1
+            </span>
+          </button>
         </div>
       </div>
-    </section>
-  );
+      <h2 className="text-center dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
+        Planning &amp; Strategy
+      </h2>
+      <h2
+        className="text-sm text-center dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200"
+        style={{color: "rgb(228, 236, 255)"}}
+      >
+        We'll collaborate to map out your website's goals, target audience, and
+        key functionalities. We'll discuss things like site structure,
+        navigation, and content requirements.
+      </h2>
+    </div>
+  </div>
+  <div className="lg:h-[35rem] rounded-3xl border border-white/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem] ">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="white"
+      className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 6v12m6-6H6"
+      ></path>
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="white"
+      className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 6v12m6-6H6"
+      ></path>
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="white"
+      className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 6v12m6-6H6"
+      ></path>
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="white"
+      className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 6v12m6-6H6"
+      ></path>
+    </svg>
+    <div className="relative z-20">
+      <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
+        <div>
+          <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"></span>
+            <span className="text-2xl inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 font-bold text-white backdrop-blur-3xl">
+              Phase 2
+            </span>
+          </button>
+        </div>
+      </div>
+      <h2 className="text-center dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
+        Development &amp; Progress Update
+      </h2>
+      <h2
+        className="text-sm text-center dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200"
+        style={{color: "rgb(228, 236, 255)"}}
+      >
+        Once we agree on the plan, I cue my lofi playlist and dive into coding.
+        From initial sketches to polished code, I keep you updated every step of
+        the way
+      </h2>
+    </div>
+  </div>
+  <div className="lg:h-[35rem] rounded-3xl border border-white/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem] ">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="white"
+      className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 6v12m6-6H6"
+      ></path>
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="white"
+      className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 6v12m6-6H6"
+      ></path>
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="white"
+      className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 6v12m6-6H6"
+      ></path>
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="white"
+      className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 6v12m6-6H6"
+      ></path>
+    </svg>
+    <div className="relative z-20">
+      <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
+        <div>
+          <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"></span>
+            <span className="text-2xl inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 font-bold text-white backdrop-blur-3xl">
+              Phase 3
+            </span>
+          </button>
+        </div>
+      </div>
+      <h2 className="text-center dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
+        Development &amp; Launch
+      </h2>
+      <h2
+        className="text-sm text-center dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200"
+        style={{color:"rgb(228, 236, 255)"}}
+      >
+        This is where the magic happens! Based on the approved design, I'll
+        translate everything into functional code, building your website from
+        the ground up.
+      </h2>
+    </div>
+  </div>
+</div>
+</section>
+  )
 }
 
-function Contact() {
+
+function ContactForm() {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(e.target);
+    const formObject = Object.fromEntries(data.entries());
+
+    const response = await fetch("https://formspree.io/f/xpwyyjen", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formObject),
+    });
+
+    if (response.ok) {
+      alert(" Message sent successfully!");
+      e.target.reset();
+    } else {
+      setStatus("❌ Failed to send message. Try again later.");
+    }
+  };
+
   return (
-    <section
-      id="contact"
-      className="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12"
-    >
-      <div>
-        <h2 className="text-3xl font-bold">Contact Me</h2>
-        <p className="mt-3 text-gray-600">
-          Tell me about your project. I'll reply within 24 hours.
-        </p>
-        <p className="mt-4 flex items-center gap-2 text-sm">
-          <Mail className="h-4 w-4" /> shivam@example.com
-        </p>
-        <p className="flex items-center gap-2 text-sm">
-          <Phone className="h-4 w-4" /> +91-00000-00000
-        </p>
-        <p className="flex items-center gap-2 text-sm">
-          <MapPin className="h-4 w-4" /> Lucknow, India
-        </p>
-      </div>
-      <form className="space-y-4">
+    <div className="h-auto w-auto flex flex-col items-center justify-center p-6">
+       <h1 className="text-[48px] font-bold text-center mb-12">Let's work <span className="text-[#cbacf9]">Togehter</span></h1>
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-4 bg-white/5 p-6 rounded-lg relative z-50"
+      >
         <input
           type="text"
+          name="name"
           placeholder="Your Name"
-          className="w-full p-2 border rounded"
+          className="w-200 p-2 border rounded bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          required
         />
         <input
           type="email"
+          name="email"
           placeholder="Email"
-          className="w-full p-2 border rounded"
+          className="w-200 p-2 border rounded bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          required
         />
         <textarea
+          name="message"
           placeholder="Tell me about your project..."
           rows="4"
-          className="w-full p-2 border rounded"
+          className="w-200 p-2 border rounded bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          required
         ></textarea>
         <button
           type="submit"
-          className="px-4 py-2 bg-indigo-600 text-white rounded flex items-center gap-2"
+          className="w-50 px-4 py-2 bg-indigo-600 text-white rounded flex items-center justify-center gap-2 hover:bg-indigo-700 transition"
         >
           <Send className="h-4 w-4" /> Send
         </button>
+
+        {status && <p className="text-sm text-green-400">{status}</p>}
       </form>
-    </section>
+    </div>
   );
 }
 
@@ -718,12 +755,12 @@ export default function PortfolioApp() {
   return (
     <Shell>
       <Hero />
-      {/* <Head /> */}
+      {/* { <Head />} */}
       <About />
       <Skills />
       <Projects />
       <Approach />
-      <Contact />
+      <ContactForm />
     </Shell>
   );
 }

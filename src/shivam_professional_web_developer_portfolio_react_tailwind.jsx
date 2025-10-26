@@ -33,7 +33,7 @@ const NAV = [
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
-  { id: "contact", label: "Contact" },
+  { id: "contactForm", label: "ContactForm" },
 ];
 
 const skills = [
@@ -115,7 +115,7 @@ function Shell({ children }) {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#000319] text-[#FAFAFA]">
+    <div className=" bg-[#000319] text-[#FAFAFA]">
       {/* Top Nav */}
       <header className="sticky top-0  bg-[#FAFAFA] text-black font-bold border-b">
         <div className="max-w-6xl mx-auto flex items-center justify-between h-16 px-4">
@@ -323,7 +323,7 @@ function Skills() {
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div
                   className="bg-indigo-600 h-2 rounded-full"
-                  style={{Width: `${s.level}%` }}
+                  style={{width: `${s.level}%` }}
                 />
               </div>
             </div>

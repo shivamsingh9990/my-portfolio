@@ -115,7 +115,7 @@ function Shell({ children }) {
   }, []);
 
   return (
-    <div className=" bg-[#000319] text-[#FAFAFA]">
+    <div className=" bg-[#000319] text-[#FAFAFA] overflow-x-hidden ">
       {/* Top Nav */}
       <header className="sticky top-0  bg-[#FAFAFA] text-black font-bold border-b">
         <div className="max-w-6xl mx-auto flex items-center justify-between h-16 px-4">

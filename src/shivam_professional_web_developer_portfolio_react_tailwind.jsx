@@ -117,7 +117,7 @@ function Shell({ children }) {
   return (
     <div className=" bg-[#000319] text-[#FAFAFA] overflow-x-hidden ">
       {/* Top Nav */}
-      <header className="sticky top-0  bg-[#FAFAFA] text-black font-bold border-b">
+      <header className="fixed w-full top-0 left-0  bg-[#FAFAFA] text-black font-bold border-bold">
         <div className="max-w-6xl mx-auto flex items-center justify-between h-16 px-4">
           <a href="#home" className="font-bold">
             Shivam • Web Developer
@@ -135,6 +135,8 @@ function Shell({ children }) {
               </a>
             ))}
           </nav>
+         
+          
         </div>
       </header>
 
